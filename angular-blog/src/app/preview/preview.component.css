@@ -1,0 +1,13 @@
+.head {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.head h2{
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+}
+.head .back {
+  position: absolute;
+  right: 0;
+}

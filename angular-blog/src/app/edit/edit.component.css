@@ -1,0 +1,40 @@
+textarea {
+  height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.label-text {
+  font-size: 20px;
+  font-family: 'Parisienne', cursive;
+  color: #df0e62;
+}
+
+.del,
+.save,
+.prev
+{
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.prev {
+  background: rgb(28, 184, 65);
+  /* this is a green */
+}
+
+.del {
+  background: rgb(202, 60, 60);
+  /* this is a maroon */
+}
+
+.save {
+  background: rgb(223, 117, 20);
+  /* this is an orange */
+}
+
+

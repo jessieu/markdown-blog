@@ -1,0 +1,21 @@
+<div class="box">
+  <div class="head">
+    <h2>All Posts</h2>
+  <button class="btn btn-primary new" (click)="newPost()">New Post</button>
+  </div>
+  <div class="post-content">
+    <ul class="posts">
+      <li *ngFor="let post of posts"
+      (click)="onSelect(post)"
+      [class.selected]="post === selectedPost"
+      [routerLink]="['/edit', post.postid]">
+        <span class="badge">
+          {{post.created.toLocaleDateString()}},
+          {{post.created.toLocaleTimeString()}}
+        </span>
+        {{post.title}}
+      </li>
+    </ul>
+  </div>
+</div>
+

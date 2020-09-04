@@ -1,0 +1,27 @@
+<div class="box" *ngIf="post">
+  <form class="edit-form" *ngIf="userForm" [formGroup]="userForm" #formDir="ngForm">
+    <div class="form-group">
+      <div>
+        <label for="title" class="label-text" >Title:</label>
+        <input class="form-control" name="title" id="title" formControlName="title" placeholder="give it a good title..."/>
+      </div>
+      <div>
+        <label for="body" class="label-text">Body:</label>
+        <textarea class="form-control" name="body" id="body" formControlName="body"  placeholder="write something here..."></textarea>
+      </div>
+      <div>
+        <span>Last Modified:
+          {{ modified.toDateString() }},
+          {{ modified.toLocaleTimeString()}}
+        </span>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn del" (click)="delete()" [routerLink]="['/']" >Delete</button>
+        <button type="button" class="btn save" (click)="save()" [disabled]="this.userForm.pristine">Save</button>
+        <button type="button" class="btn prev" (click)="preview()">Preview</button>
+      </div>
+    </div>
+  </form>
+  </div>
+
+

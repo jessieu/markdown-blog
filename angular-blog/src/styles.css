@@ -1,0 +1,17 @@
+body {
+  /* The image used */
+  /* background-image: url('./assets/images/background4.png'); */
+  background-color: #ffcece;
+  /* Full height */
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html {
+  height: 100%;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <% posts.forEach(post => { %>
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="card-title">
+                    <%- writer.render(reader.parse(post.title)) %>
+                </div>
+                <div class="card-subtitle text-muted mb-2">
+                    <span class="mr-2">Created: <%= new Date(post.created) %></span>
+                    <span>Modified: <%= new Date(post.modified) %></span>
+                </div>
+                <div class="card-text mb-2">
+                    <%- writer.render(reader.parse(post.body)) %>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+    <% if (count > 5) { %>
+        <a class="btn btn-info" id="next" href="/blog/<%= username %>?start=<%= start + pageSize %>">Next</a>
+    <% } %>
+</body>
+</html>
